@@ -43,7 +43,9 @@ public class Main extends javax.swing.JFrame {
     }
 
     void agregar() {
-        modelo.addRow(new Object[]{jTextPane1.getText(), jTextPane2.getText()});
+
+
+        modelo.addRow(new Object[]{null,jTextPane1.getText(), jTextPane2.getText()});
 
     }
 
@@ -173,8 +175,8 @@ public class Main extends javax.swing.JFrame {
             return;
         }
         int fila = jTable1.getSelectedRow();
-        jTable1.setValueAt(jTextPane1.getText(), fila, 0);
-        jTable1.setValueAt(jTextPane2.getText(), fila, 1);
+        jTable1.setValueAt(jTextPane1.getText(), fila, 1);
+        jTable1.setValueAt(jTextPane2.getText(), fila, 2);
         lista.editarTareaNumero(fila,jTextPane1.getText(),jTextPane2.getText());
         System.out.println(lista);
 
@@ -198,8 +200,8 @@ public class Main extends javax.swing.JFrame {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
         if (evt.getClickCount() == 2) {
             int fila = jTable1.getSelectedRow();
-            String titulo = (String) modelo.getValueAt(fila, 0);
-            String descripcion = (String) modelo.getValueAt(fila, 1);
+            String titulo = (String) modelo.getValueAt(fila, 1);
+            String descripcion = (String) modelo.getValueAt(fila, 2);
             jTextPane1.setText(titulo);
             jTextPane2.setText(descripcion);
 
