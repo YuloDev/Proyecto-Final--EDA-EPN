@@ -42,9 +42,8 @@ gh repo clone Daniki30/Proyecto-Final--EDA-EPN
 
 ## Funciones
 
-- Visualizar lista de tareas
 - Añadir nueva tarea
-- Eliminar última tarea
+- Eliminar tareas
 - Editar tareas
 - Salir
 
